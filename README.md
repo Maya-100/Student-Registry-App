@@ -1,1 +1,1 @@
-# renting-houses
+# Student Registry App
