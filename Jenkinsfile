@@ -20,14 +20,14 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm run start &'
+                sh 'npm install'
                 sh 'npm install -g wait-on kill-port'
             }
         }
 
         stage('Run tests') {
             steps {
-                sh 'start /b npm run start'
+                sh 'npm run start &'
                 sh 'wait-on http://localhost:8082'
                 sh 'npm test'
                 sh 'kill-port 8082'
