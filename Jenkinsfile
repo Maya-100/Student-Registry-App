@@ -20,7 +20,7 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm run start &'
                 sh 'npm install -g wait-on kill-port'
             }
         }
